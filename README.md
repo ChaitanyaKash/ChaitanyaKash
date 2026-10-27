@@ -1,40 +1,24 @@
-## Hi, I'm Chaitanya Kashyap 👋
 
-AI/ML undergrad at **NIT Sikkim** (B.Tech, 2024–2028). I like taking messy, real-world data through cleaning, modelling and honest evaluation. Lately that means **NLP for Indian cybercrime**, in English, Hinglish and Hindi.
+Chaitanya Kashyap
+I'm a B.Tech student in AI & ML at NIT Sikkim (2024–2028). Most of my time right now goes into NLP for Indian cybercrime: complaints and scam messages written in English, Hindi and Hinglish, usually full of typos.
 
-> Data doesn't lie, but it takes the right questions to make it speak.
+LinkedIn · chaitanyawork03@gmail.com · Telegram
 
-### 🔭 What I'm working on
+Projects
+CyberLens Classifies cybercrime complaints from the I4C CyberGuard dataset into 39 fraud subtypes, and checks whether a message is a scam.
 
-**[CyberLens](https://github.com/ChaitanyaKash/CyberLens)** · multilingual cybercrime complaint and scam classifier
+Cleaned about 93.7K records. Found that my "leak-proof" train/test split was actually hiding recurring complaint templates, so I went back to the official split.
+Combined a fine-tuned XLM-RoBERTa with a TF-IDF model. Macro-F1 went from 0.2345 to 0.2745 over 39 classes. Many classes are rare, so the score is low, but the gain held up under bootstrap tests.
+The scam detector scored ~0.97 on synthetic data but ~0.76 on 2,264 real scam SMS and 3,481 real normal messages. It mostly struggles with genuine promotional SMS. That gap is what I'm working on now.
+Streamlit app with PII masking and a few follow-up questions when one missing detail changes the answer.
+Next: a RAG layer over RBI, I4C and DoT documents so the app can point people to the right steps.
+Customer Segmentation Course project for Data Warehousing & Mining. ETL into a star schema, RFM features, K-Means/DBSCAN/GMM, anomaly detection and XGBoost with SHAP. I'm redoing the labels and evaluation after finding problems in the original setup.
 
-- Sorts Indian cybercrime complaints (English, Hinglish, typo-heavy text) into **39 fraud subtypes**, using the I4C CyberGuard dataset.
-- Cleaned **93,686 records** and found that a "leak-proof" train/test split was hiding recurring complaint templates, so I switched to the official protocol.
-- Fused a fine-tuned **XLM-RoBERTa** with a TF-IDF model: macro-F1 **0.2345 → 0.2745** across 39 classes, with bootstrap confidence intervals above zero, including on unseen templates.
-- Built a **scam vs. not-scam** detector and tested it on **2,264 real reported scam SMS** and **3,481 real non-scam messages**. Real-world macro-F1 is about **0.76** (vs. ~0.97 on synthetic data), and the main failure is legit promotional SMS. I report that gap instead of hiding it.
-- Rejected several model variants (including a newer v3 and HingRoBERTa) because they didn't pass adoption rules I fixed before testing.
-- **Streamlit app** with confidence-graded verdicts, PII masking (GLiNER), and rule-based **clarifying questions** when one missing fact decides the answer.
-- In progress: a **RAG** layer over official RBI, I4C and DoT documents to give step-by-step guidance and a complaint draft.
+Krishi Mitra Hackathon project. A farmer-support site that uses ISRO's NDVI satellite data for crop-health alerts.
 
-**[Customer Segmentation & E-Commerce Analytics](https://github.com/ChaitanyaKash/CustomerSegmentation)** · course project (Data Warehousing & Mining)
+Tools I use
+Python, SQL, PyTorch, Hugging Face Transformers, scikit-learn, XGBoost, SHAP, Pandas, NumPy, Streamlit, Git
 
-- ETL of 25K+ sessions into a star-schema warehouse, RFM features, K-Means / DBSCAN / GMM clustering, Isolation Forest anomalies, and XGBoost with SHAP.
-- Currently reworking the labels and evaluation after an audit showed the original target and dataset couldn't support the predictions.
+Looking for
+Internships or research work in ML, NLP or data science. Happy to talk if you're working on something similar.
 
-**[Krishi Mitra](https://github.com/ChaitanyaKash/KrishiMitra)** · hackathon farmer-support platform using ISRO NDVI satellite data for crop-health alerts.
-
-### 🛠️ Tools
-
-Python · SQL · PyTorch · Hugging Face Transformers · scikit-learn · XGBoost · SHAP · Pandas · NumPy · Streamlit · Git
-
-### 🌱 Learning
-
-NLP for code-mixed Indian languages, retrieval-augmented generation, and building evaluations that hold up on real data.
-
-### 🤝 Open to
-
-Internships and research in ML engineering, NLP and data science.
-
-### 📫 Reach me
-
-[LinkedIn](https://linkedin.com/in/chaitanya-kashyap) · chaitanyawork03@gmail.com · Telegram [@itschaitanyahere](https://t.me/itschaitanyahere)
