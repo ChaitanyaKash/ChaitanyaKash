@@ -1,6 +1,6 @@
 # Chaitanya Kashyap
 
-B.Tech student in AI & ML at NIT Sikkim (2024–2028). I mostly work on NLP for Indian cybercrime: complaints and scam messages in English, Hindi and Hinglish.
+B.Tech student in AI & ML at NIT Sikkim (2024–2028), interested in machine learning and data science. This semester I'm building CyberLens for my NLP & Generative AI lab.
 
 [LinkedIn](https://linkedin.com/in/chaitanya-kashyap) · [chaitanyawork03@gmail.com](mailto:chaitanyawork03@gmail.com) · [Telegram](https://t.me/itschaitanyahere)
 
